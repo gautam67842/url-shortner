@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body style="display: flex; justify-content: center;">
+    <div style="text-align: center; max-width: fit-content;">
+        <h1>Login</h1>
+
+        <form action="/user/login" method="post">
+            <input type="text" placeholder="email" name="email">
+            <input type="text" placeholder="password" name="password">
+            <button type="submit">login</button>
+        </form>
+
+        <% if (locals.err) { %>
+            <p style="color:red; background-color: hsl(0, 100%, 90%);">
+                <%= err %>
+            </p>
+            <% } %>
+
+                <div>
+                    <p>new here?</p>
+                    <a href="/signup"><button>sign up</button></a>
+                </div>
+    </div>
+</body>
+
+</html>
