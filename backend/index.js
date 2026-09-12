@@ -47,7 +47,7 @@ app.use(cors({
 
 // React sends POST request here
 // User must be logged in
-app.use("/url", restrictToLoggeinUserOnly, urlRroute);
+app.use("/url",  urlRroute);
 
 
 // Backend/EJS pages
