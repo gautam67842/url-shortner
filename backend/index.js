@@ -38,7 +38,7 @@ app.use(cookieParser());
 
 // CORS
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://url-shortner-1-sum6.onrender.com",
     credentials: true
 }));
 

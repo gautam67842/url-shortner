@@ -31,9 +31,13 @@ async function handleUserLogin(req, res) {
 
     const sessionID = setUser(user);
 
-    res.cookie("uid" , sessionID);
+    res.cookie("uid", sessionID, {
+    httpOnly: true,
+    secure: true,
+    sameSite: "none"
+});
  
-    return res.redirect("http://localhost:5173/");
+    return res.redirect("https://url-shortner-1-sum6.onrender.com");
 }
 
 module.exports = {

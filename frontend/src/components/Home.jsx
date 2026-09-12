@@ -13,7 +13,7 @@ export default function Home() {
         const checkLogin = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:5000/user/me",
+                    "https://url-shortner-vg70.onrender.com/user/me",
                     {
                         withCredentials: true
                     }
@@ -40,7 +40,7 @@ export default function Home() {
         try {
 
             const response = await axios.post(
-                "http://localhost:5000/url",
+                "https://url-shortner-vg70.onrender.com/url",
                 {
                     url: url
                 },
@@ -57,7 +57,7 @@ export default function Home() {
 
             if (err.response?.status === 401) {
                 window.location.href =
-                    "http://localhost:5000/user/login";
+                    "https://url-shortner-vg70.onrender.com/user/login";
             }
         }
     };
@@ -161,7 +161,7 @@ export default function Home() {
                             </p>
 
                             <a
-                                href={`http://localhost:5000/url/${shortId}`}
+                                href={`https://url-shortner-vg70.onrender.com/url/${shortId}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="text-blue-500 hover:underline break-all"
@@ -216,7 +216,7 @@ export default function Home() {
                         type="button"
                         onClick={() => {
                             window.location.href =
-                                "http://localhost:5000/user/login";
+                                "https://url-shortner-vg70.onrender.com";
                         }}
                         className="
                             w-full
