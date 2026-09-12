@@ -53,13 +53,16 @@ export default function Home() {
 
         } catch (err) {
 
-            console.log(err);
+    console.log("ERROR STATUS:", err.response?.status);
+    console.log("ERROR DATA:", err.response?.data);
+    console.log("FULL ERROR:", err);
 
-            if (err.response?.status === 401) {
-                window.location.href =
-                    "https://url-shortner-vg70.onrender.com/user/login";
-            }
-        }
+    // temporarily remove the redirect
+    // if (err.response?.status === 401) {
+    //     window.location.href =
+    //         "https://YOUR-BACKEND.onrender.com/user/login";
+    // }
+}
     };
 
 
